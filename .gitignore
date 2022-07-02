@@ -1,0 +1,6 @@
+*.pyc
+env/
+frontend/node_modules/
+node_modules/
+soundle-app/env/Lib
+soundle_app/soundle_app/settings.py
