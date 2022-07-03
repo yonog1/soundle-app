@@ -1,33 +1,14 @@
-import logo from "./favicon.ico";
 import "./App.css";
-import {
-    Navbar,
-    Button,
-    Alert,
-    Breadcrumb,
-    Card,
-    Nav,
-    NavDropdown,
-} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import Navegation from "./Navegation";
+import SearchBar from "./SearchBar";
+import { Button, Card } from "react-bootstrap";
 
 function App() {
     return (
         <div className="App">
-            <Navbar bg="Nav-Styling" variant="light" sticky="fix" expand="sm">
-                <Navbar.Brand>
-                    <img className="Nav-Image" src={logo}></img>
-                    Musicle
-                </Navbar.Brand>
-                <Nav>
-                    <Nav.Link href="user-stats">Stats</Nav.Link>
-                    <NavDropdown title="More Info">
-                        <Nav.Link href="how-to-play">How to play</Nav.Link>
-                        <Nav.Link href="about">About</Nav.Link>
-                        <Nav.Link href="contact">Contact Us</Nav.Link>
-                    </NavDropdown>
-                </Nav>
-            </Navbar>
+            <Navegation />
             <header className="App-header">
                 <Card className="Card-Image" style={{ color: "#000" }}>
                     <Card.Img src="./favicon.ico" width="50" />
@@ -40,6 +21,7 @@ function App() {
                 <Button variant="success" size="lg">
                     Test button
                 </Button>
+                <SearchBar />
             </header>
         </div>
     );
