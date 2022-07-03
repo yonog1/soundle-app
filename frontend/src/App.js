@@ -21,15 +21,13 @@ function App() {
                 </Navbar.Brand>
                 <Nav>
                     <Nav.Link href="user-stats">Stats</Nav.Link>
-                    <Nav.Link href="info">More Info</Nav.Link>
-                    <NavDropdown>
+                    <NavDropdown title="More Info">
                         <Nav.Link href="how-to-play">How to play</Nav.Link>
                         <Nav.Link href="about">About</Nav.Link>
                         <Nav.Link href="contact">Contact Us</Nav.Link>
                     </NavDropdown>
                 </Nav>
             </Navbar>
-            <div className="content">This is content.</div>
             <header className="App-header">
                 <Card className="Card-Image" style={{ color: "#000" }}>
                     <Card.Img src="./favicon.ico" width="50" />
