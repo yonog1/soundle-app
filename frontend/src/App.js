@@ -8,12 +8,12 @@ import LoginButton from "./LoginButton";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" style={{height: '100%'}}>
             <Navegation />
-            <body className="App-header">
-                <LoginButton></LoginButton>
+            <div className="App-header">
+                <LoginButton/>
                 <SearchBar />
-            </body>
+            </div>
         </div>
     );
 }
