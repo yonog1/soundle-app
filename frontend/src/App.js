@@ -3,18 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navegation from "./Navegation";
 import SearchBar from "./SearchBar";
-import { Button, Card } from "react-bootstrap";
+import LoginButton from "./LoginButton";
+
 
 function App() {
     return (
         <div className="App">
             <Navegation />
-            <header className="App-header">
-                <Button variant="success" size="lg">
-                    Test button
-                </Button>
+            <body className="App-header">
+                <LoginButton></LoginButton>
                 <SearchBar />
-            </header>
+            </body>
         </div>
     );
 }
