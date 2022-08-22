@@ -1,0 +1,21 @@
+{
+  "name": "soundle-app",
+  "description": "A game where you try to guess a song within the first 1 to 5 seconds,\r The earlier you guess the better!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonog1/soundle-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yonog1/soundle-app/issues"
+  },
+  "homepage": "https://github.com/yonog1/soundle-app#readme"
+}
