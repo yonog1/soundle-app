@@ -8,14 +8,13 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-
 function App() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
         fetch("/api")
             .then((res) => res.json())
-            .then((data) => setData(data.message));
+            .then((data) => setData(data.access_token));
     }, []);
 
     return (
@@ -24,7 +23,10 @@ function App() {
             <div className="App-header">
                 <p>{!data ? "Loading..." : data}</p>
                 <LoginButton />
-                <SpotifyPlayer />
+                <SpotifyPlayer
+                    token={data}
+                    uris={["spotify:artist:6HQYnRM4OzToCYPpVBInuU"]}
+                />
                 <SearchBar />
             </div>
         </div>

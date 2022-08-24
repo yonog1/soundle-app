@@ -84,7 +84,13 @@ app.get("/callback", (req, res) => {
 
 app.get("/api", (req, res) => {
     res.json({
-        message: `Hello from server! ${process.env.REACT_APP_SPOTIFY_CLIENT_ID}`,
+        message: `Hello from server!`,
+        access_token: spotifyApi.access_token
+            ? spotifyApi.access_token
+            : "no access",
+        refresh_token: spotifyApi.refresh_token
+            ? spotifyApi.refresh_token
+            : "no refresh",
     });
 });
 
