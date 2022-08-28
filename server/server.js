@@ -27,7 +27,7 @@ const scopes = [
 const PORT = process.env.PORT || 3001;
 
 var spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3001/login",
+    redirectUri: "http://localhost:3001/callback",
     clientId: process.env.REACT_APP_SPOTIFY_CLIENT_ID,
     clientSecret: process.env.REACT_APP_SPOTIFY_CLIENT_SECRET,
 });

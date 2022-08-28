@@ -9,22 +9,32 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function App() {
-    const [data, setData] = useState(null);
+    const [refreshToken, setRefreshToken] = useState(null);
+    const [accessToken, setAccessToken] = useState(null);
 
     useEffect(() => {
         fetch("/api")
             .then((res) => res.json())
-            .then((data) => setData(data.access_token));
+            .then((accessToken) => setAccessToken(accessToken.access_token));
+    }, []);
+
+    useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            .then((refreshToken) =>
+                setRefreshToken(refreshToken.refresh_token)
+            );
     }, []);
 
     return (
         <div className="App" style={{ height: "100%" }}>
             <Navegation />
             <div className="App-header">
-                <p>{!data ? "Loading..." : data}</p>
+                <p>{!accessToken ? "Loading..." : accessToken}</p>
+                <p>{!refreshToken ? "Loading..." : refreshToken}</p>
                 <LoginButton />
                 <SpotifyPlayer
-                    token={data}
+                    token={refreshToken}
                     uris={["spotify:artist:6HQYnRM4OzToCYPpVBInuU"]}
                 />
                 <SearchBar />
